@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int n,r,komb;
+        int nfak=1,rfak=1,nrfak=1;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("n=");
+        n= input.nextInt();
+
+        System.out.print("r=");
+        r= input.nextInt();
+
+        for (int i=1;i<=n;i++){
+            nfak*=i;
+        }
+        for (int j=1;j<=r;j++){
+            rfak*=j;
+        }
+        for (int k=1;k<=(n-r);k++){
+            nrfak*=k;
+        }
+
+        komb=nfak/(rfak*nrfak);
+        System.out.println("cevap="+komb);
+
+    }
+}
